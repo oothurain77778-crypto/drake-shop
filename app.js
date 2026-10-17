@@ -1,15 +1,15 @@
-/* DRAKE SHOP — loads products.json, renders cards per category tab */
+/* DRAKE SHOP v2 — loads products.json, renders cards per category tab */
 (function () {
   "use strict";
 
   var BOT_ORDER_URL = "https://t.me/Drakereply_bot?start=order_";
 
   var CAT_META = {
-    nft:     { emoji: "💎", label: "NFTs" },
-    account: { emoji: "👤", label: "Accounts" },
-    premium: { emoji: "👑", label: "Premium" },
-    stars:   { emoji: "⭐", label: "Stars" },
-    gram:    { emoji: "🪙", label: "Gram" }
+    nft:     { emoji: "💎", art: "art-nft" },
+    account: { emoji: "👤", art: "art-account" },
+    premium: { emoji: "👑", art: "art-premium" },
+    stars:   { emoji: "⭐", art: "art-stars" },
+    gram:    { emoji: "🪙", art: "art-gram" }
   };
 
   var grid = document.getElementById("grid");
@@ -26,15 +26,19 @@
   }
 
   function cardHTML(p) {
-    var meta = CAT_META[p.cat] || { emoji: "📦", label: "" };
+    var meta = CAT_META[p.cat] || { emoji: "📦", art: "art-nft" };
     var orderUrl = BOT_ORDER_URL + encodeURIComponent(p.id);
     return (
       '<article class="card">' +
-        '<div class="card-emoji">' + meta.emoji + "</div>" +
-        "<h3>" + esc(p.name) + "</h3>" +
-        '<div class="price">' + esc(p.price) + "</div>" +
-        '<p class="desc">' + esc(p.desc) + "</p>" +
-        '<a class="buy-btn" href="' + orderUrl + '" target="_blank" rel="noopener">BUY</a>' +
+        '<div class="card-art ' + meta.art + '">' + meta.emoji + "</div>" +
+        '<div class="card-body">' +
+          "<h3>" + esc(p.name) + "</h3>" +
+          '<p class="desc">' + esc(p.desc) + "</p>" +
+          '<div class="card-foot">' +
+            '<span class="price">' + esc(p.price) + "</span>" +
+            '<a class="buy-btn" href="' + orderUrl + '" target="_blank" rel="noopener">BUY</a>' +
+          "</div>" +
+        "</div>" +
       "</article>"
     );
   }
@@ -69,8 +73,7 @@
       allProducts = Array.isArray(data.products) ? data.products : [];
       render();
     })
-    .catch(function (err) {
+    .catch(function () {
       grid.innerHTML = '<p class="error">Could not load products. Please reopen the shop.</p>';
-      if (window.console) console.error("products.json load failed:", err);
     });
 })();
