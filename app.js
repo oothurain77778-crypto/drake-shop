@@ -1,21 +1,19 @@
-/* DRAKE SHOP v2 — loads products.json, renders cards per category tab */
+/* DRAKE SHOP v3 — Zenith-style sections with horizontal product cards */
 (function () {
   "use strict";
 
   var BOT_ORDER_URL = "https://t.me/Drakereply_bot?start=order_";
 
   var CAT_META = {
-    nft:     { emoji: "💎", art: "art-nft" },
-    account: { emoji: "👤", art: "art-account" },
-    premium: { emoji: "👑", art: "art-premium" },
-    stars:   { emoji: "⭐", art: "art-stars" },
-    gram:    { emoji: "🪙", art: "art-gram" }
+    nft:     { emoji: "💎", label: "NFTs",            art: "art-nft" },
+    account: { emoji: "👤", label: "ACCOUNTS",        art: "art-account" },
+    premium: { emoji: "👑", label: "PREMIUM",         art: "art-premium" },
+    stars:   { emoji: "⭐", label: "STARS",           art: "art-stars" },
+    gram:    { emoji: "🪙", label: "GRAM",            art: "art-gram" }
   };
+  var CAT_ORDER = ["nft", "account", "premium", "stars", "gram"];
 
-  var grid = document.getElementById("grid");
-  var tabs = document.getElementById("tabs");
-  var allProducts = [];
-  var activeCat = "nft";
+  var sectionsEl = document.getElementById("sections");
 
   function esc(s) {
     return String(s == null ? "" : s)
@@ -29,39 +27,48 @@
     var meta = CAT_META[p.cat] || { emoji: "📦", art: "art-nft" };
     var orderUrl = BOT_ORDER_URL + encodeURIComponent(p.id);
     return (
-      '<article class="card">' +
-        '<div class="card-art ' + meta.art + '">' + meta.emoji + "</div>" +
-        '<div class="card-body">' +
-          "<h3>" + esc(p.name) + "</h3>" +
-          '<p class="desc">' + esc(p.desc) + "</p>" +
-          '<div class="card-foot">' +
-            '<span class="price">' + esc(p.price) + "</span>" +
-            '<a class="buy-btn" href="' + orderUrl + '" target="_blank" rel="noopener">BUY</a>' +
-          "</div>" +
+      '<article class="p-card">' +
+        '<div class="p-img ' + meta.art + '">' + meta.emoji + "</div>" +
+        '<div class="p-body">' +
+          '<div class="p-name">' + esc(p.name) + "</div>" +
+          '<div class="p-price">' + esc(p.price) + "</div>" +
+          '<a class="p-buy" href="' + orderUrl + '" target="_blank" rel="noopener">Buy Now</a>' +
         "</div>" +
       "</article>"
     );
   }
 
-  function render() {
-    var items = allProducts.filter(function (p) { return p.cat === activeCat; });
-    if (!items.length) {
-      grid.innerHTML = '<p class="loading">No products in this category yet.</p>';
-      return;
-    }
-    grid.innerHTML = items.map(cardHTML).join("");
+  function sectionHTML(cat, items) {
+    var meta = CAT_META[cat];
+    return (
+      '<section class="cat-section" id="sec-' + cat + '">' +
+        '<div class="sec-head"><h2>' + meta.emoji + " " + meta.label + '</h2>' +
+        '<span class="see-all">See All →</span></div>' +
+        '<div class="h-scroll">' + items.map(cardHTML).join("") + "</div>" +
+      "</section>"
+    );
   }
 
-  tabs.addEventListener("click", function (e) {
-    var btn = e.target.closest(".tab");
+  function render(products) {
+    var html = "";
+    CAT_ORDER.forEach(function (cat) {
+      var items = products.filter(function (p) { return p.cat === cat; });
+      if (items.length) html += sectionHTML(cat, items);
+    });
+    sectionsEl.innerHTML = html || '<p class="empty">No products yet.</p>';
+  }
+
+  // bottom nav scrolling
+  document.querySelector(".bottomnav").addEventListener("click", function (e) {
+    var btn = e.target.closest("[data-go]");
     if (!btn) return;
-    var cat = btn.getAttribute("data-cat");
-    if (!cat || cat === activeCat) return;
-    activeCat = cat;
-    var btns = tabs.querySelectorAll(".tab");
-    for (var i = 0; i < btns.length; i++) btns[i].classList.remove("active");
-    btn.classList.add("active");
-    render();
+    var target = btn.getAttribute("data-go");
+    if (target === "top") {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    } else {
+      var el = document.getElementById(target);
+      if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
   });
 
   fetch("products.json", { cache: "no-store" })
@@ -70,10 +77,9 @@
       return res.json();
     })
     .then(function (data) {
-      allProducts = Array.isArray(data.products) ? data.products : [];
-      render();
+      render(Array.isArray(data.products) ? data.products : []);
     })
     .catch(function () {
-      grid.innerHTML = '<p class="error">Could not load products. Please reopen the shop.</p>';
+      sectionsEl.innerHTML = '<p class="error">Could not load products. Please reopen the shop.</p>';
     });
 })();
