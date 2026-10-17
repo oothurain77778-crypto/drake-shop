@@ -26,9 +26,14 @@
   function cardHTML(p) {
     var meta = CAT_META[p.cat] || { emoji: "📦", art: "art-nft" };
     var orderUrl = BOT_ORDER_URL + encodeURIComponent(p.id);
+    var artInner = '<span class="p-emoji">' + meta.emoji + "</span>";
+    if (p.img) {
+      // real image on top; emoji stays behind as graceful fallback
+      artInner += '<img src="' + esc(p.img) + '" alt="" loading="lazy" onerror="this.remove()">';
+    }
     return (
       '<article class="p-card">' +
-        '<div class="p-img ' + meta.art + '">' + meta.emoji + "</div>" +
+        '<div class="p-img ' + meta.art + '">' + artInner + "</div>" +
         '<div class="p-body">' +
           '<div class="p-name">' + esc(p.name) + "</div>" +
           '<div class="p-price">' + esc(p.price) + "</div>" +
