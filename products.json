@@ -111,14 +111,6 @@
       "img": "",
       "name": "10 Gram",
       "price": "$14"
-    },
-    {
-      "id": "sta72531",
-      "cat": "stars",
-      "name": "Test Stars Pack 150",
-      "price": "3$",
-      "desc": "test product, will delete",
-      "img": ""
     }
   ]
 }
