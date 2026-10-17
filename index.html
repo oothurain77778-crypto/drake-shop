@@ -8,33 +8,41 @@
 </head>
 <body>
 
-<header class="hero">
-  <div class="hero-glow"></div>
-  <div class="hero-inner">
-    <div class="hero-badge">⚡ OFFICIAL STORE</div>
-    <h1>🛍️ DRAKE SHOP</h1>
-    <p class="tagline">NFTs • Accounts • Premium • Stars • Gram</p>
-    <p class="hero-sub">စိတ်ချရတဲ့ဆိုင် — Order တင်လိုက်, Bot ကနေ အတည်ပြုပေးမယ် ✅</p>
+<header class="appbar">
+  <div class="brand">
+    <div class="brand-logo">🛍️</div>
+    <div class="brand-text"><b>DRAKE SHOP</b><small>OFFICIAL STORE</small></div>
   </div>
+  <div class="appbar-icons"><span>🔔</span><span>☰</span></div>
 </header>
 
-<nav class="tabs" id="tabs">
-  <button class="tab active" data-cat="nft">💎<span>NFTs</span></button>
-  <button class="tab" data-cat="account">👤<span>Accounts</span></button>
-  <button class="tab" data-cat="premium">👑<span>Premium</span></button>
-  <button class="tab" data-cat="stars">⭐<span>Stars</span></button>
-  <button class="tab" data-cat="gram">🪙<span>Gram</span></button>
-</nav>
-
-<main>
-  <div class="grid" id="grid">
-    <p class="loading">Loading products…</p>
+<section class="hero">
+  <div class="hero-art">
+    <span class="float f1">💎</span><span class="float f2">⭐</span>
+    <span class="float f3">👑</span><span class="float f4">🪙</span>
   </div>
+  <div class="hero-text">
+    <h2>💎 NFTs • ⭐ Stars • 👑 Premium<br>Drake Shop က Bro တို့အတွက် အကုန်ရပြီ!</h2>
+    <p>Order တင် → Bot ကနေ အတည်ပြုပေး → Owner ကိုယ်တိုင်ပို့ပေး ✅</p>
+  </div>
+</section>
+
+<main id="sections">
+  <p class="loading">Loading products…</p>
 </main>
 
 <footer class="shop-footer">
   <p>🔒 Orders are confirmed via @Drakereply_bot — owner delivers manually.</p>
+  <p class="tiny">Privacy Policy | Terms &amp; Conditions</p>
 </footer>
+
+<nav class="bottomnav">
+  <button data-go="top">🏠<span>Home</span></button>
+  <button data-go="sec-nft">💎<span>NFTs</span></button>
+  <button data-go="top" class="center-btn">🛍️</button>
+  <button data-go="sec-stars">⭐<span>Stars</span></button>
+  <a href="https://t.me/Drakereply_bot" target="_blank" rel="noopener">💬<span>Support</span></a>
+</nav>
 
 <script src="app.js"></script>
 </body>
