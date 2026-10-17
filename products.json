@@ -111,6 +111,14 @@
       "img": "img/ton.png",
       "name": "10 Gram",
       "price": "$14"
+    },
+    {
+      "id": "nft4",
+      "cat": "nft",
+      "name": "Snow Globe #54708",
+      "price": "100000",
+      "desc": "Collectible Telegram gift NFT",
+      "img": "img/nft4.jpg"
     }
   ]
 }
