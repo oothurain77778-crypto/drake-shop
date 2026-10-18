@@ -20,14 +20,6 @@
     },
     {
       "cat": "account",
-      "desc": "Sample: brand-new Telegram account, clean session. Details provided after payment.",
-      "id": "acc1",
-      "img": "img/telegram.png",
-      "name": "Fresh Telegram account",
-      "price": "$3"
-    },
-    {
-      "cat": "account",
       "desc": "Sample: aged Telegram account with history. Details provided after payment.",
       "id": "acc2",
       "img": "img/telegram.png",
