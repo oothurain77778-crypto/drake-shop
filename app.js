@@ -26,14 +26,18 @@
   function cardHTML(p) {
     var meta = CAT_META[p.cat] || { emoji: "📦", art: "art-nft" };
     var orderUrl = BOT_ORDER_URL + encodeURIComponent(p.id);
-    var artInner = '<span class="p-emoji">' + meta.emoji + "</span>";
-    if (p.img) {
-      // real image on top; emoji stays behind as graceful fallback
-      artInner += '<img src="' + esc(p.img) + '" alt="" loading="lazy" onerror="this.remove()">';
-    }
+    var artInner;
     if (p.anim) {
-      // animated .tgs sticker plays over the static poster
-      artInner += '<div class="lottie" data-tgs="' + esc(p.anim) + '"></div>';
+      // animation only — no static poster; poster/emoji injected by JS if tgs fails
+      artInner = '<div class="lottie" data-tgs="' + esc(p.anim) + '"' +
+                 ' data-poster="' + esc(p.img || "") + '"' +
+                 ' data-emoji="' + meta.emoji + '"></div>';
+    } else {
+      artInner = '<span class="p-emoji">' + meta.emoji + "</span>";
+      if (p.img) {
+        // real image on top; emoji stays behind as graceful fallback
+        artInner += '<img src="' + esc(p.img) + '" alt="" loading="lazy" onerror="this.remove()">';
+      }
     }
     return (
       '<article class="p-card">' +
@@ -69,9 +73,13 @@
   }
 
   // Play .tgs (gzipped Lottie) animations inside cards via lottie-web + pako.
-  // Static image stays underneath as poster/fallback.
+  // No static poster for animated cards (user request); if the tgs fails,
+  // fall back to the static poster image, then to emoji.
   function mountTgs() {
-    if (typeof lottie === "undefined" || typeof pako === "undefined") return;
+    if (typeof lottie === "undefined" || typeof pako === "undefined") {
+      tgsFallbackAll();
+      return;
+    }
     var els = sectionsEl.querySelectorAll(".lottie[data-tgs]:not([data-done])");
     for (var i = 0; i < els.length; i++) {
       (function (el) {
@@ -88,9 +96,40 @@
               loop: true, autoplay: true, animationData: json
             });
           })
-          .catch(function () { /* keep static poster */ });
+          .catch(function () { tgsFallback(el); });
       })(els[i]);
     }
+  }
+
+  function tgsFallback(el) {
+    var poster = el.getAttribute("data-poster");
+    var emoji = el.getAttribute("data-emoji") || "📦";
+    var parent = el.parentNode;
+    el.remove();
+    if (poster) {
+      var im = document.createElement("img");
+      im.src = poster;
+      im.alt = "";
+      im.onerror = function () {
+        im.remove();
+        emojiFallback(parent, emoji);
+      };
+      parent.appendChild(im);
+    } else {
+      emojiFallback(parent, emoji);
+    }
+  }
+
+  function emojiFallback(parent, emoji) {
+    var s = document.createElement("span");
+    s.className = "p-emoji";
+    s.textContent = emoji;
+    parent.appendChild(s);
+  }
+
+  function tgsFallbackAll() {
+    var els = sectionsEl.querySelectorAll(".lottie[data-tgs]:not([data-done])");
+    for (var i = 0; i < els.length; i++) tgsFallback(els[i]);
   }
 
   // bottom nav scrolling
