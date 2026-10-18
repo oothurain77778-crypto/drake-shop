@@ -124,6 +124,21 @@
       ],
       "slug": "XmasStocking-57690",
       "bgsvg": "img/nft1-x1-bg.svg"
+    },
+    {
+      "id": "nft2",
+      "cat": "nft",
+      "name": "Eternal Candle #25348",
+      "price": "100k",
+      "desc": "Collectible Telegram gift NFT",
+      "img": "img/nft2-4219b.jpg",
+      "anim": "img/nft2-4219b.tgs",
+      "bg": [
+        "#e28ab6",
+        "#a4588b"
+      ],
+      "slug": "EternalCandle-25348",
+      "bgsvg": "img/nft2-4219b-bg.svg"
     }
   ]
 }
