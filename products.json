@@ -123,6 +123,15 @@
       "desc": "Collectible Telegram gift NFT",
       "img": "img/nft4.jpg",
       "anim": "img/nft4.tgs"
+    },
+    {
+      "id": "nft5",
+      "cat": "nft",
+      "name": "Pet Snake #105253",
+      "price": "40k",
+      "desc": "Collectible Telegram gift NFT",
+      "img": "img/nft5.jpg",
+      "anim": "img/nft5.tgs"
     }
   ]
 }
