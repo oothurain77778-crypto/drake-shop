@@ -26,26 +26,27 @@
   function cardHTML(p) {
     var meta = CAT_META[p.cat] || { emoji: "📦", art: "art-nft" };
     var orderUrl = BOT_ORDER_URL + encodeURIComponent(p.id);
-    // per-gift backdrop colors (from t.me) override the generic category gradient
+    // official t.me gift backdrop (gradient + symbol pattern), else per-gift
+    // gradient colors, else the generic category gradient
     var artClass = meta.art;
     var artStyle = "";
-    if (p.bg && p.bg.length === 2) {
+    var artInner = '<span class="p-emoji">' + meta.emoji + "</span>";
+    if (p.bgsvg) {
+      artClass = "";
+      artInner += '<img class="bg-svg" src="' + esc(p.bgsvg) + '" alt="" loading="lazy" onerror="this.remove()">';
+    } else if (p.bg && p.bg.length === 2) {
       artClass = "";
       artStyle = ' style="background:radial-gradient(120% 100% at 50% 30%, ' +
                  esc(p.bg[0]) + ', ' + esc(p.bg[1]) + ')"';
     }
-    var artInner;
     if (p.anim) {
       // animation only — no static poster; poster/emoji injected by JS if tgs fails
-      artInner = '<div class="lottie" data-tgs="' + esc(p.anim) + '"' +
+      artInner += '<div class="lottie" data-tgs="' + esc(p.anim) + '"' +
                  ' data-poster="' + esc(p.img || "") + '"' +
                  ' data-emoji="' + meta.emoji + '"></div>';
-    } else {
-      artInner = '<span class="p-emoji">' + meta.emoji + "</span>";
-      if (p.img) {
-        // real image on top; emoji stays behind as graceful fallback
-        artInner += '<img src="' + esc(p.img) + '" alt="" loading="lazy" onerror="this.remove()">';
-      }
+    } else if (p.img) {
+      // real image on top; emoji stays behind as graceful fallback
+      artInner += '<img src="' + esc(p.img) + '" alt="" loading="lazy" onerror="this.remove()">';
     }
     return (
       '<article class="p-card">' +
