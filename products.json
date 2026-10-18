@@ -12,7 +12,8 @@
         "#8ab163",
         "#559345"
       ],
-      "slug": "DurovsCap-1"
+      "slug": "DurovsCap-1",
+      "bgsvg": "img/nft2-bg.svg"
     },
     {
       "cat": "nft",
@@ -26,7 +27,8 @@
         "#5c9bc4",
         "#37739a"
       ],
-      "slug": "PreciousPeach-1"
+      "slug": "PreciousPeach-1",
+      "bgsvg": "img/nft3-bg.svg"
     },
     {
       "cat": "premium",
@@ -112,7 +114,8 @@
         "#e28ab6",
         "#a4588b"
       ],
-      "slug": "SnowGlobe-54708"
+      "slug": "SnowGlobe-54708",
+      "bgsvg": "img/nft4-bg.svg"
     },
     {
       "id": "nft5",
@@ -126,7 +129,8 @@
         "#e28ab6",
         "#a4588b"
       ],
-      "slug": "PetSnake-105253"
+      "slug": "PetSnake-105253",
+      "bgsvg": "img/nft5-bg.svg"
     },
     {
       "id": "acc3",
