@@ -125,6 +125,17 @@ body {
   object-fit: cover;
   z-index: 1;
 }
+.lottie {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+}
+.lottie svg {
+  width: 100% !important;
+  height: 100% !important;
+  display: block;
+}
 .art-nft     { background: linear-gradient(135deg, #5b21b6, #7c3aed); }
 .art-account { background: linear-gradient(135deg, #0c4a6e, #0284c7); }
 .art-premium { background: linear-gradient(135deg, #92400e, #f59e0b); }
