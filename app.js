@@ -3,6 +3,8 @@
   "use strict";
 
   var BOT_ORDER_URL = "https://t.me/Drakereply_bot?start=order_";
+  // bump on every deploy that changes media assets — cache-busts img/tgs/svg URLs
+  var ASSET_VER = "10";
 
   var CAT_META = {
     nft:     { emoji: "💎", label: "NFTs",            art: "art-nft" },
@@ -33,7 +35,7 @@
     var artInner = '<span class="p-emoji">' + meta.emoji + "</span>";
     if (p.bgsvg) {
       artClass = "";
-      artInner += '<img class="bg-svg" src="' + esc(p.bgsvg) + '" alt="" loading="lazy" onerror="this.remove()">';
+      artInner += '<img class="bg-svg" src="' + esc(p.bgsvg) + "?v=" + ASSET_VER + '" alt="" loading="lazy" onerror="this.remove()">';
     } else if (p.bg && p.bg.length === 2) {
       artClass = "";
       artStyle = ' style="background:radial-gradient(120% 100% at 50% 30%, ' +
