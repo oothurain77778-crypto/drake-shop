@@ -31,6 +31,10 @@
       // real image on top; emoji stays behind as graceful fallback
       artInner += '<img src="' + esc(p.img) + '" alt="" loading="lazy" onerror="this.remove()">';
     }
+    if (p.anim) {
+      // animated .tgs sticker plays over the static poster
+      artInner += '<div class="lottie" data-tgs="' + esc(p.anim) + '"></div>';
+    }
     return (
       '<article class="p-card">' +
         '<div class="p-img ' + meta.art + '">' + artInner + "</div>" +
@@ -61,6 +65,32 @@
       if (items.length) html += sectionHTML(cat, items);
     });
     sectionsEl.innerHTML = html || '<p class="empty">No products yet.</p>';
+    mountTgs();
+  }
+
+  // Play .tgs (gzipped Lottie) animations inside cards via lottie-web + pako.
+  // Static image stays underneath as poster/fallback.
+  function mountTgs() {
+    if (typeof lottie === "undefined" || typeof pako === "undefined") return;
+    var els = sectionsEl.querySelectorAll(".lottie[data-tgs]:not([data-done])");
+    for (var i = 0; i < els.length; i++) {
+      (function (el) {
+        el.setAttribute("data-done", "1");
+        fetch(el.getAttribute("data-tgs"), { cache: "force-cache" })
+          .then(function (res) {
+            if (!res.ok) throw new Error("tgs " + res.status);
+            return res.arrayBuffer();
+          })
+          .then(function (buf) {
+            var json = JSON.parse(pako.inflate(new Uint8Array(buf), { to: "string" }));
+            lottie.loadAnimation({
+              container: el, renderer: "svg",
+              loop: true, autoplay: true, animationData: json
+            });
+          })
+          .catch(function () { /* keep static poster */ });
+      })(els[i]);
+    }
   }
 
   // bottom nav scrolling
