@@ -116,13 +116,14 @@
       "name": "Xmas Stocking #57690",
       "price": "40k",
       "desc": "Collectible Telegram gift NFT",
-      "img": "img/nft1.jpg",
-      "anim": "img/nft1.tgs",
+      "img": "img/nft1-x1.jpg",
+      "anim": "img/nft1-x1.tgs",
       "bg": [
         "#e28ab6",
         "#a4588b"
       ],
-      "slug": "XmasStocking-57690"
+      "slug": "XmasStocking-57690",
+      "bgsvg": "img/nft1-x1-bg.svg"
     }
   ]
 }
