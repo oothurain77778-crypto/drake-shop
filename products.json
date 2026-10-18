@@ -2,21 +2,6 @@
   "products": [
     {
       "cat": "nft",
-      "desc": "Sample: rare Telegram gift NFT. Price/availability confirmed at order time.",
-      "id": "nft2",
-      "img": "img/nft2.jpg",
-      "name": "Telegram Gift — Durov's Cap",
-      "price": "12 TON",
-      "anim": "img/nft2.tgs",
-      "bg": [
-        "#8ab163",
-        "#559345"
-      ],
-      "slug": "DurovsCap-1",
-      "bgsvg": "img/nft2-bg.svg"
-    },
-    {
-      "cat": "nft",
       "desc": "Sample: premium Telegram gift NFT. Price/availability confirmed at order time.",
       "id": "nft3",
       "img": "img/nft3.jpg",
