@@ -26,6 +26,14 @@
   function cardHTML(p) {
     var meta = CAT_META[p.cat] || { emoji: "📦", art: "art-nft" };
     var orderUrl = BOT_ORDER_URL + encodeURIComponent(p.id);
+    // per-gift backdrop colors (from t.me) override the generic category gradient
+    var artClass = meta.art;
+    var artStyle = "";
+    if (p.bg && p.bg.length === 2) {
+      artClass = "";
+      artStyle = ' style="background:radial-gradient(120% 100% at 50% 30%, ' +
+                 esc(p.bg[0]) + ', ' + esc(p.bg[1]) + ')"';
+    }
     var artInner;
     if (p.anim) {
       // animation only — no static poster; poster/emoji injected by JS if tgs fails
@@ -41,7 +49,7 @@
     }
     return (
       '<article class="p-card">' +
-        '<div class="p-img ' + meta.art + '">' + artInner + "</div>" +
+        '<div class="p-img ' + artClass + '"' + artStyle + ">" + artInner + "</div>" +
         '<div class="p-body">' +
           '<div class="p-name">' + esc(p.name) + "</div>" +
           '<div class="p-price">' + esc(p.price) + "</div>" +
