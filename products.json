@@ -123,6 +123,14 @@
       "desc": "Collectible Telegram gift NFT",
       "img": "img/nft5.jpg",
       "anim": "img/nft5.tgs"
+    },
+    {
+      "id": "acc3",
+      "cat": "account",
+      "name": "0911887238",
+      "price": "1500ks",
+      "desc": "Telegram account",
+      "img": "img/telegram.png"
     }
   ]
 }
