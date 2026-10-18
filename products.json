@@ -6,7 +6,8 @@
       "id": "nft1",
       "img": "img/nft1.jpg",
       "name": "Telegram Gift — Plush Pepe",
-      "price": "5 TON"
+      "price": "5 TON",
+      "anim": "img/nft1.tgs"
     },
     {
       "cat": "nft",
@@ -14,7 +15,8 @@
       "id": "nft2",
       "img": "img/nft2.jpg",
       "name": "Telegram Gift — Durov's Cap",
-      "price": "12 TON"
+      "price": "12 TON",
+      "anim": "img/nft2.tgs"
     },
     {
       "cat": "nft",
@@ -22,7 +24,8 @@
       "id": "nft3",
       "img": "img/nft3.jpg",
       "name": "Telegram Gift — Precious Peach",
-      "price": "25 TON"
+      "price": "25 TON",
+      "anim": "img/nft3.tgs"
     },
     {
       "cat": "account",
@@ -118,7 +121,8 @@
       "name": "Snow Globe #54708",
       "price": "100000ks",
       "desc": "Collectible Telegram gift NFT",
-      "img": "img/nft4.jpg"
+      "img": "img/nft4.jpg",
+      "anim": "img/nft4.tgs"
     }
   ]
 }
