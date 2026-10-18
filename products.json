@@ -1,21 +1,6 @@
 {
   "products": [
     {
-      "cat": "nft",
-      "desc": "Sample: premium Telegram gift NFT. Price/availability confirmed at order time.",
-      "id": "nft3",
-      "img": "img/nft3.jpg",
-      "name": "Telegram Gift — Precious Peach",
-      "price": "25 TON",
-      "anim": "img/nft3.tgs",
-      "bg": [
-        "#5c9bc4",
-        "#37739a"
-      ],
-      "slug": "PreciousPeach-1",
-      "bgsvg": "img/nft3-bg.svg"
-    },
-    {
       "cat": "premium",
       "desc": "Official Telegram Premium subscription, 1 month, activated on your account.",
       "id": "prem1",
