@@ -7,7 +7,12 @@
       "img": "img/nft2.jpg",
       "name": "Telegram Gift — Durov's Cap",
       "price": "12 TON",
-      "anim": "img/nft2.tgs"
+      "anim": "img/nft2.tgs",
+      "bg": [
+        "#8ab163",
+        "#559345"
+      ],
+      "slug": "DurovsCap-1"
     },
     {
       "cat": "nft",
@@ -16,7 +21,12 @@
       "img": "img/nft3.jpg",
       "name": "Telegram Gift — Precious Peach",
       "price": "25 TON",
-      "anim": "img/nft3.tgs"
+      "anim": "img/nft3.tgs",
+      "bg": [
+        "#5c9bc4",
+        "#37739a"
+      ],
+      "slug": "PreciousPeach-1"
     },
     {
       "cat": "premium",
@@ -97,7 +107,12 @@
       "price": "100000ks",
       "desc": "Collectible Telegram gift NFT",
       "img": "img/nft4.jpg",
-      "anim": "img/nft4.tgs"
+      "anim": "img/nft4.tgs",
+      "bg": [
+        "#e28ab6",
+        "#a4588b"
+      ],
+      "slug": "SnowGlobe-54708"
     },
     {
       "id": "nft5",
@@ -106,7 +121,12 @@
       "price": "40k",
       "desc": "Collectible Telegram gift NFT",
       "img": "img/nft5.jpg",
-      "anim": "img/nft5.tgs"
+      "anim": "img/nft5.tgs",
+      "bg": [
+        "#e28ab6",
+        "#a4588b"
+      ],
+      "slug": "PetSnake-105253"
     },
     {
       "id": "acc3",
