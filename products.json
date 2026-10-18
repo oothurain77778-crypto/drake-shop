@@ -19,14 +19,6 @@
       "anim": "img/nft3.tgs"
     },
     {
-      "cat": "account",
-      "desc": "Sample: aged Telegram account with history. Details provided after payment.",
-      "id": "acc2",
-      "img": "img/telegram.png",
-      "name": "Aged Telegram account",
-      "price": "$8"
-    },
-    {
       "cat": "premium",
       "desc": "Official Telegram Premium subscription, 1 month, activated on your account.",
       "id": "prem1",
