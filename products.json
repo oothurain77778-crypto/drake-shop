@@ -109,6 +109,20 @@
       "price": "1500ks",
       "desc": "Telegram account",
       "img": "img/telegram.png"
+    },
+    {
+      "id": "nft1",
+      "cat": "nft",
+      "name": "Xmas Stocking #57690",
+      "price": "40k",
+      "desc": "Collectible Telegram gift NFT",
+      "img": "img/nft1.jpg",
+      "anim": "img/nft1.tgs",
+      "bg": [
+        "#e28ab6",
+        "#a4588b"
+      ],
+      "slug": "XmasStocking-57690"
     }
   ]
 }
