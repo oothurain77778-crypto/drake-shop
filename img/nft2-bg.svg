@@ -1,0 +1,74 @@
+<svg width="420px" height="280px" viewBox="0 0 420 280" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+      <radialGradient id="giftGradient" cx="50%" cy="50%" fx="50%" fy="50%" r="69.65%" gradientTransform="translate(0.5, 0.5), scale(0.6667, 1), rotate(90), translate(-0.5, -0.5)">
+        <stop stop-color="#8ab163" offset="0%"></stop>
+        <stop stop-color="#559345" offset="100%"></stop>
+      </radialGradient>
+      <filter id="patternColorFilter">
+        <feFlood id="giftGradienPatternColor" flood-color="#126b00"></feFlood>
+        <feComposite in2="SourceGraphic" operator="in"></feComposite>
+      </filter>
+      <g id="fullPattern">
+        <g opacity="0.212890625" transform="translate(140.5761, 13.79)">
+          <use xlink:href="#giftPattern" href="#giftPattern" transform="scale(0.3)"></use>
+        </g>
+        <g opacity="0.212890625" transform="translate(249.465, 13.79)">
+          <use xlink:href="#giftPattern" href="#giftPattern" transform="scale(0.3)"></use>
+        </g>
+        <g opacity="0.223865327" transform="translate(291.8539, 102.7918)">
+          <use xlink:href="#giftPattern" href="#giftPattern" transform="scale(0.3)"></use>
+        </g>
+        <g opacity="0.223865327" transform="translate(98.1872, 102.7918)">
+          <use xlink:href="#giftPattern" href="#giftPattern" transform="scale(0.3)"></use>
+        </g>
+        <g opacity="0.221633185" transform="translate(276.2551, 176.2043)">
+          <use xlink:href="#giftPattern" href="#giftPattern" transform="scale(0.277)"></use>
+        </g>
+        <g opacity="0.123046875" transform="translate(196.144, 188.6412)">
+          <use xlink:href="#giftPattern" href="#giftPattern" transform="scale(0.277)"></use>
+        </g>
+        <g opacity="0.221633185" transform="translate(116.0329, 176.2043)">
+          <use xlink:href="#giftPattern" href="#giftPattern" transform="scale(0.277)"></use>
+        </g>
+        <g opacity="0.189569382" transform="translate(355.0988, 79.3286)">
+          <use xlink:href="#giftPattern" href="#giftPattern" transform="scale(0.2247)"></use>
+        </g>
+        <g opacity="0.260904948" transform="translate(292.0988, 52.1228)">
+          <use xlink:href="#giftPattern" href="#giftPattern" transform="scale(0.2247)"></use>
+        </g>
+        <g opacity="0.146437872" transform="translate(334.0988, 17.5326)">
+          <use xlink:href="#giftPattern" href="#giftPattern" transform="scale(0.2247)"></use>
+        </g>
+        <g opacity="0.153087798" transform="translate(198.7654, -5.7866)">
+          <use xlink:href="#giftPattern" href="#giftPattern" transform="scale(0.2247)"></use>
+        </g>
+        <g opacity="0.145321801" transform="translate(63.4321, 17.5326)">
+          <use xlink:href="#giftPattern" href="#giftPattern" transform="scale(0.2247)"></use>
+        </g>
+        <g opacity="0.260904948" transform="translate(105.4321, 52.1228)">
+          <use xlink:href="#giftPattern" href="#giftPattern" transform="scale(0.2247)"></use>
+        </g>
+        <g opacity="0.165899368" transform="translate(42.4321, 79.3286)">
+          <use xlink:href="#giftPattern" href="#giftPattern" transform="scale(0.2247)"></use>
+        </g>
+        <g opacity="0.165899368" transform="translate(72.7654, 155.8935)">
+          <use xlink:href="#giftPattern" href="#giftPattern" transform="scale(0.2247)"></use>
+        </g>
+        <g opacity="0.10500372" transform="translate(49.4321, 205.6413)">
+          <use xlink:href="#giftPattern" href="#giftPattern" transform="scale(0.2247)"></use>
+        </g>
+        <g opacity="0.10500372" transform="translate(344.2099, 205.6413)">
+          <use xlink:href="#giftPattern" href="#giftPattern" transform="scale(0.2247)"></use>
+        </g>
+        <g opacity="0.152669271" transform="translate(337.2099, 155.8935)">
+          <use xlink:href="#giftPattern" href="#giftPattern" transform="scale(0.2247)"></use>
+        </g>
+      </g>
+      <image id="giftPattern" x="0" y="0" width="100" height="100" xlink:href="data:image/png;base64,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" href="data:image/png;base64,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"></image>
+    </defs>
+    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+      <rect x="0" y="0" width="420" height="280" fill="url(#giftGradient)"></rect>
+      <use xlink:href="#fullPattern" href="#fullPattern" filter="url(#patternColorFilter)"></use>
+      <text x="210" y="226" font-size="23" font-weight="500" width="410" text-anchor="middle"dominant-baseline="middle" fill="#fff">Durov’s Cap</text>
+    </g>
+  </svg>
