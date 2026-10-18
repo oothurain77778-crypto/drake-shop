@@ -1,0 +1,74 @@
+<svg width="420px" height="280px" viewBox="0 0 420 280" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+      <radialGradient id="giftGradient" cx="50%" cy="50%" fx="50%" fy="50%" r="69.65%" gradientTransform="translate(0.5, 0.5), scale(0.6667, 1), rotate(90), translate(-0.5, -0.5)">
+        <stop stop-color="#e28ab6" offset="0%"></stop>
+        <stop stop-color="#a4588b" offset="100%"></stop>
+      </radialGradient>
+      <filter id="patternColorFilter">
+        <feFlood id="giftGradienPatternColor" flood-color="#8e054e"></feFlood>
+        <feComposite in2="SourceGraphic" operator="in"></feComposite>
+      </filter>
+      <g id="fullPattern">
+        <g opacity="0.212890625" transform="translate(140.5761, 13.79)">
+          <use xlink:href="#giftPattern" href="#giftPattern" transform="scale(0.3)"></use>
+        </g>
+        <g opacity="0.212890625" transform="translate(249.465, 13.79)">
+          <use xlink:href="#giftPattern" href="#giftPattern" transform="scale(0.3)"></use>
+        </g>
+        <g opacity="0.223865327" transform="translate(291.8539, 102.7918)">
+          <use xlink:href="#giftPattern" href="#giftPattern" transform="scale(0.3)"></use>
+        </g>
+        <g opacity="0.223865327" transform="translate(98.1872, 102.7918)">
+          <use xlink:href="#giftPattern" href="#giftPattern" transform="scale(0.3)"></use>
+        </g>
+        <g opacity="0.221633185" transform="translate(276.2551, 176.2043)">
+          <use xlink:href="#giftPattern" href="#giftPattern" transform="scale(0.277)"></use>
+        </g>
+        <g opacity="0.123046875" transform="translate(196.144, 188.6412)">
+          <use xlink:href="#giftPattern" href="#giftPattern" transform="scale(0.277)"></use>
+        </g>
+        <g opacity="0.221633185" transform="translate(116.0329, 176.2043)">
+          <use xlink:href="#giftPattern" href="#giftPattern" transform="scale(0.277)"></use>
+        </g>
+        <g opacity="0.189569382" transform="translate(355.0988, 79.3286)">
+          <use xlink:href="#giftPattern" href="#giftPattern" transform="scale(0.2247)"></use>
+        </g>
+        <g opacity="0.260904948" transform="translate(292.0988, 52.1228)">
+          <use xlink:href="#giftPattern" href="#giftPattern" transform="scale(0.2247)"></use>
+        </g>
+        <g opacity="0.146437872" transform="translate(334.0988, 17.5326)">
+          <use xlink:href="#giftPattern" href="#giftPattern" transform="scale(0.2247)"></use>
+        </g>
+        <g opacity="0.153087798" transform="translate(198.7654, -5.7866)">
+          <use xlink:href="#giftPattern" href="#giftPattern" transform="scale(0.2247)"></use>
+        </g>
+        <g opacity="0.145321801" transform="translate(63.4321, 17.5326)">
+          <use xlink:href="#giftPattern" href="#giftPattern" transform="scale(0.2247)"></use>
+        </g>
+        <g opacity="0.260904948" transform="translate(105.4321, 52.1228)">
+          <use xlink:href="#giftPattern" href="#giftPattern" transform="scale(0.2247)"></use>
+        </g>
+        <g opacity="0.165899368" transform="translate(42.4321, 79.3286)">
+          <use xlink:href="#giftPattern" href="#giftPattern" transform="scale(0.2247)"></use>
+        </g>
+        <g opacity="0.165899368" transform="translate(72.7654, 155.8935)">
+          <use xlink:href="#giftPattern" href="#giftPattern" transform="scale(0.2247)"></use>
+        </g>
+        <g opacity="0.10500372" transform="translate(49.4321, 205.6413)">
+          <use xlink:href="#giftPattern" href="#giftPattern" transform="scale(0.2247)"></use>
+        </g>
+        <g opacity="0.10500372" transform="translate(344.2099, 205.6413)">
+          <use xlink:href="#giftPattern" href="#giftPattern" transform="scale(0.2247)"></use>
+        </g>
+        <g opacity="0.152669271" transform="translate(337.2099, 155.8935)">
+          <use xlink:href="#giftPattern" href="#giftPattern" transform="scale(0.2247)"></use>
+        </g>
+      </g>
+      <image id="giftPattern" x="0" y="0" width="100" height="100" xlink:href="data:image/png;base64,UklGRm4EAABXRUJQVlA4WAoAAAAQAAAAfwAAfwAAQUxQSAEEAAABoAVJtmnbGpvXtm3bvs+2bdu2bfPatm3bOrZP7L2jn+bCGGM+fUXEBNB/vQFLhTte+dqYOat2nshDIufY9hWzRr14SeugLTo+MnpHKTwt2vjD3VHtyp/3xTH4u1618OVziuF/Xb0avJwEjltI6xGTY+CY9kYFpfosB8tlV0VJ55YTwHJxJ1K65iel4Jh0NWl9RSZYflaJlK4yCixLbyKthx0Dy/TBpHTkvQRYHmxBSldZBJ7pLUnpxjvBs3gAKd0jGTwTl5PS5+aD6buk9CUxMD1SXqkRJeB6NuncKw9cx5HObdPBNdZYp0bHwXYyqRzZCL7DdPoQfHeQyueD8X0qNczg1Faj4AowTiGNnwLn8RrVy2d1j0Y/g/UAhfokeLVWaC14V9fnOvCOB9QJHGKWTupeCOYn9FnCLVedzuCeUOc7dqglKtrCXc1ifoMkNU3FgpCbh8H/NklfA7jGzTIBX0hKAjDeRfWYgP2COgNAbsTZtZDYSM6jf8LpzsaJuF/Ogr/4zFE4R8QmMVWK/+K4oxGQ2UnKs/jrbk6eE/KzkHJphsedjBcSay7jARh/dbJXCH4WETlu2uqgbFwKBkt4HOaSkKkHxO6M8OtW6gBtTTfJwQfsyu2B08tM7wnCBdy+gOOXTKMl5XThdS2cjzPNkoSkZpyujruYZ1opCodb8LkmDperTDtkIaUbl2vicLvNdEwY8q5gEX03AdeHTDnSgC/L+tdhKzxMNQQS8nDwLL8eLIaXhSaoOLWrD6HrdsJjAxWoAMwY6lHZe47A63xTshLAkVd6Bd3UvuanNHh/1LRfDQBZU168smuDSlSxed8LbntnawK+bjJt0oT3fNNSW40xjbfVp6ZXbPWS6VpbXWnqZatWpsqWyiWHKXZa5mS2nd538pidrnXSw05tnQSybHSIHE+x0bvO7rNRf2cN4vZJCjijhfb5nFxeb5+RbioU2CY55IZ+sc0z5HqIZQqquaPVdvmEPDzHKvHmXtBmm0wgTy+1SR9vAjvtMY48HmaN/AZe0ShbPE6e182xw56Id3S/HUaSj8ENNhhPvrbI0e9odX/oMvVKepHfn2t3N/ke3azbKGLYNFmzXRU4UJccvdLaEM8hxVpldiGuF8d1yulJfG+Oa5TfnzhfXKxP4RDiPSRHm+wRxL1Lki57WhP/pps0mVmZJEY/1eONAAm9NEeHwitJbvN1GsxvTpID92RLS7uOpNf+WdZPNUjBwdvk7B5BSl64Qcb6iwOk5xnL+S0YQcoO+CGPU+mEnqRwuavnxngUT7uuCmld987xaX4VTryqIinf6YFpxxPelG7+7p7+5ciO5bte8fyoBWt3Hc+Ol6btXz9v3Fdv3tQ1Qv/PBABWUDggRgAAAHAGAJ0BKoAAgAA+USiSRyOioaEgiABwCglpbuF0kABPbYi8QVHPbEXiCo57Yi8QVHPbEXiCo57Yi8QTYAD+/7X0AAAAAAA=" href="data:image/png;base64,UklGRm4EAABXRUJQVlA4WAoAAAAQAAAAfwAAfwAAQUxQSAEEAAABoAVJtmnbGpvXtm3bvs+2bdu2bfPatm3bOrZP7L2jn+bCGGM+fUXEBNB/vQFLhTte+dqYOat2nshDIufY9hWzRr14SeugLTo+MnpHKTwt2vjD3VHtyp/3xTH4u1618OVziuF/Xb0avJwEjltI6xGTY+CY9kYFpfosB8tlV0VJ55YTwHJxJ1K65iel4Jh0NWl9RSZYflaJlK4yCixLbyKthx0Dy/TBpHTkvQRYHmxBSldZBJ7pLUnpxjvBs3gAKd0jGTwTl5PS5+aD6buk9CUxMD1SXqkRJeB6NuncKw9cx5HObdPBNdZYp0bHwXYyqRzZCL7DdPoQfHeQyueD8X0qNczg1Faj4AowTiGNnwLn8RrVy2d1j0Y/g/UAhfokeLVWaC14V9fnOvCOB9QJHGKWTupeCOYn9FnCLVedzuCeUOc7dqglKtrCXc1ifoMkNU3FgpCbh8H/NklfA7jGzTIBX0hKAjDeRfWYgP2COgNAbsTZtZDYSM6jf8LpzsaJuF/Ogr/4zFE4R8QmMVWK/+K4oxGQ2UnKs/jrbk6eE/KzkHJphsedjBcSay7jARh/dbJXCH4WETlu2uqgbFwKBkt4HOaSkKkHxO6M8OtW6gBtTTfJwQfsyu2B08tM7wnCBdy+gOOXTKMl5XThdS2cjzPNkoSkZpyujruYZ1opCodb8LkmDperTDtkIaUbl2vicLvNdEwY8q5gEX03AdeHTDnSgC/L+tdhKzxMNQQS8nDwLL8eLIaXhSaoOLWrD6HrdsJjAxWoAMwY6lHZe47A63xTshLAkVd6Bd3UvuanNHh/1LRfDQBZU168smuDSlSxed8LbntnawK+bjJt0oT3fNNSW40xjbfVp6ZXbPWS6VpbXWnqZatWpsqWyiWHKXZa5mS2nd538pidrnXSw05tnQSybHSIHE+x0bvO7rNRf2cN4vZJCjijhfb5nFxeb5+RbioU2CY55IZ+sc0z5HqIZQqquaPVdvmEPDzHKvHmXtBmm0wgTy+1SR9vAjvtMY48HmaN/AZe0ShbPE6e182xw56Id3S/HUaSj8ENNhhPvrbI0e9odX/oMvVKepHfn2t3N/ke3azbKGLYNFmzXRU4UJccvdLaEM8hxVpldiGuF8d1yulJfG+Oa5TfnzhfXKxP4RDiPSRHm+wRxL1Lki57WhP/pps0mVmZJEY/1eONAAm9NEeHwitJbvN1GsxvTpID92RLS7uOpNf+WdZPNUjBwdvk7B5BSl64Qcb6iwOk5xnL+S0YQcoO+CGPU+mEnqRwuavnxngUT7uuCmld987xaX4VTryqIinf6YFpxxPelG7+7p7+5ciO5bte8fyoBWt3Hc+Ol6btXz9v3Fdv3tQ1Qv/PBABWUDggRgAAAHAGAJ0BKoAAgAA+USiSRyOioaEgiABwCglpbuF0kABPbYi8QVHPbEXiCo57Yi8QVHPbEXiCo57Yi8QTYAD+/7X0AAAAAAA="></image>
+    </defs>
+    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+      <rect x="0" y="0" width="420" height="280" fill="url(#giftGradient)"></rect>
+      <use xlink:href="#fullPattern" href="#fullPattern" filter="url(#patternColorFilter)"></use>
+      <text x="210" y="226" font-size="23" font-weight="500" width="410" text-anchor="middle" dominant-baseline="middle" fill="#fff">Eternal Candle</text>
+    </g>
+  </svg>
