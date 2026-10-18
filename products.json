@@ -2,15 +2,6 @@
   "products": [
     {
       "cat": "nft",
-      "desc": "Sample: collectible Telegram gift NFT. Price/availability confirmed at order time.",
-      "id": "nft1",
-      "img": "img/nft1.jpg",
-      "name": "Telegram Gift — Plush Pepe",
-      "price": "5 TON",
-      "anim": "img/nft1.tgs"
-    },
-    {
-      "cat": "nft",
       "desc": "Sample: rare Telegram gift NFT. Price/availability confirmed at order time.",
       "id": "nft2",
       "img": "img/nft2.jpg",
