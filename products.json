@@ -139,6 +139,21 @@
       ],
       "slug": "EternalCandle-25348",
       "bgsvg": "img/nft2-4219b-bg.svg"
+    },
+    {
+      "id": "nft3",
+      "cat": "nft",
+      "name": "Toy Bear #9460",
+      "price": "200k",
+      "desc": "Collectible Telegram gift NFT",
+      "img": "img/nft3-a8020.jpg",
+      "anim": "img/nft3-a8020.tgs",
+      "bg": [
+        "#537991",
+        "#416479"
+      ],
+      "slug": "ToyBear-9460",
+      "bgsvg": "img/nft3-a8020-bg.svg"
     }
   ]
 }
